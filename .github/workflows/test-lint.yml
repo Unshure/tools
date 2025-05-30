@@ -18,7 +18,7 @@ jobs:
     permissions:
       pull-requests: read
     # Skip this check if explicitly requested or if this is a release workflow
-    if: inputs.skip_approval_check != true && github.event_name == 'pull_request'
+    if: inputs.skip_approval_check != true
     outputs:
       approved: ${{ steps.check-approval.outputs.approved }}
     steps:
